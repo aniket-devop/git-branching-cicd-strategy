@@ -1,404 +1,619 @@
-<div align="center">
+# Git Branching Strategy & CI/CD Pipeline with Environment-Based Deployments
 
-# Aniket Kumar
+> A reference implementation and documentation of two complementary Git workflows, **Trunk-Based Development** (for infrastructure code) and **Git Flow** (for application code), with automated CI/CD pipelines and promotion across **DEV → QA → UAT → PROD** environments.
 
-### DevOps Engineer &nbsp;·&nbsp; Azure &nbsp;·&nbsp; Terraform &nbsp;·&nbsp; Kubernetes &nbsp;·&nbsp; CI/CD
-
-**I make infrastructure boring in the right way.**<br/>
-No manual clicks. No "it works on my machine." Everything reproducible, everything in code.
-
-<br/>
-
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/aniket484)
-[![Email](https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aniketkmr484@gmail.com)
-[![Projects](https://img.shields.io/badge/FEATURED%20PROJECTS-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](#-featured-projects)
-[![Open to work](https://img.shields.io/badge/OPEN%20TO%20WORK-22C55E?style=for-the-badge&logo=checkmarx&logoColor=white)](#-lets-talk)
-
-<img src="https://komarev.com/ghpvc/?username=aniket-devop&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views"/>
-
-<br/>
-
-| 🧑‍💻 Experience | ☁️ Primary Cloud | 🏗️ IaC | ☸️ Orchestration | 📍 Location |
-|:---:|:---:|:---:|:---:|:---:|
-| **2 Years** | **Azure** | **Terraform** | **Kubernetes / AKS** | **Bengaluru, India** |
-
-</div>
-
-<br/>
-
-## ⚡ Skills
-
-<table>
-<tr>
-<td width="170"><b>☁️ Cloud & IaC</b></td>
-<td><img src="https://skillicons.dev/icons?i=azure,aws,terraform" alt="Cloud and IaC"/></td>
-</tr>
-<tr>
-<td><b>📦 Containers & GitOps</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=docker,kubernetes" alt="Containers"/>
-<img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm" align="top"/>
-<img src="https://img.shields.io/badge/ArgoCD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" alt="ArgoCD" align="top"/>
-</td>
-</tr>
-<tr>
-<td><b>🚀 CI/CD & Security</b></td>
-<td>
-<img src="https://skillicons.dev/icons?i=githubactions,git,github" alt="CI/CD"/>
-<img src="https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azuredevops&logoColor=white" alt="Azure DevOps" align="top"/>
-<img src="https://img.shields.io/badge/Trivy-1904DA?style=for-the-badge&logo=aqua&logoColor=white" alt="Trivy" align="top"/>
-</td>
-</tr>
-<tr>
-<td><b>📊 Monitoring</b></td>
-<td><img src="https://skillicons.dev/icons?i=prometheus,grafana" alt="Monitoring"/></td>
-</tr>
-<tr>
-<td><b>💻 Languages & OS</b></td>
-<td><img src="https://skillicons.dev/icons?i=python,bash,linux,fastapi,react,postgres" alt="Languages"/></td>
-</tr>
-</table>
-
-<sub>🔐 IaC security scanning: TFLint · TFSec · Checkov &nbsp;|&nbsp; ☁️ Azure is my primary cloud; AWS is hands-on project experience.</sub>
-
-<br/>
-
-## 📊 GitHub at a Glance
-
-<div align="center">
-
-<img src="assets/stats.svg" alt="GitHub stats" width="100%"/>
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com/?user=aniket-devop&hide_border=true&theme=dark&background=0D1117&ring=38BDF8&fire=22D3A6&currStreakLabel=38BDF8&sideLabels=9CC9FF&dates=6E8FB8" alt="GitHub streak"/>
-
-</div>
-
-<br/>
-
-## 🎬 Live Demo: a real AKS cluster, not a screenshot
-
-Most portfolios show you code. This one shows a **live AKS cluster serving real traffic**: 27 simulated industrial assets streaming telemetry every 5 seconds into a dashboard with 3D digital twins and real-time health scoring.
-
-https://github.com/aniket-devop/axion-cloud-infrastructure/raw/main/docs/demo/axion-deployment-demo.mp4
-
-**[→ Read the full write-up](#1-axion-intelligence-platform)** · Terraform · AKS · ACR · FastAPI · React · PostgreSQL · end-to-end on Azure
-
-<br/>
-
-## 👨‍💻 About Me
-
-I'm **Aniket Kumar**, a DevOps Engineer with **2 years of hands-on experience** in Azure infrastructure, Terraform, CI/CD automation, containerized deployments, Kubernetes, and DevSecOps.
-
-My day job is Azure and pipelines. My own time goes into projects I build to actually run, not just to demo, because I'd rather find out where a design breaks on my own dime than on a client's.
-
-- 🔧 DevOps Engineer @ **DevOps Insiders**
-- ☁️ Azure provisioning and automation with **Terraform**
-- ☸️ Containerized deployments with **Docker, Kubernetes, AKS, Helm**
-- 🚀 CI/CD with **GitHub Actions** and **Azure DevOps**
-- 🔐 DevSecOps and IaC security with **Trivy, TFLint, TFSec, Checkov**
-- 📊 Observability with **Prometheus and Grafana**
-- 🔄 GitOps with **ArgoCD** (personal projects)
-- 🌱 Hands-on **AWS** infrastructure project with Terraform
-- 🎓 BCA, Chandigarh Group of Colleges, Mohali
-
-<br/>
-
-## 💼 Experience
-
-**DevOps Engineer · DevOps Insiders**
-
-- Provision and manage Azure infrastructure with Terraform: resource groups, virtual networks, and Azure Kubernetes Service (AKS)
-- Build and maintain CI/CD pipelines in GitHub Actions and Azure DevOps Pipelines to automate build, test, and deployment
-- Containerize applications with Docker and deploy workloads to Kubernetes/AKS using Helm charts
-- Integrate security and IaC scanning into the delivery lifecycle (DevSecOps)
-- Set up monitoring and observability with Prometheus and Grafana
-- Troubleshoot pipeline, infrastructure, and deployment issues across environments
-- Work with developers and QA to keep release cycles smooth and reliable
-
-<br/>
-
-## 🏗️ Featured Projects
-
-| # | Project | What it does | Stack |
-|:-:|---|---|---|
-| 1 | **[Axion Intelligence Platform](#1-axion-intelligence-platform)** ⭐ | Industrial IoT telemetry platform, 27 simulated assets streaming live data, deployed end-to-end on AKS | Terraform, AKS, ACR, FastAPI, React, PostgreSQL |
-| 2 | [GitOps CI/CD Pipeline](#2-gitops-cicd-pipeline) | CI builds, scans and publishes an image; ArgoCD reconciles the cluster; rollback is a pure Git operation | GitHub Actions, Trivy, GHCR, Helm, ArgoCD, Kind |
-| 3 | [Azure Network Foundation](#3-azure-network-foundation) | Hub-and-spoke network: Firewall, Bastion, deny-by-default NSGs, RBAC-scoped Key Vault | Terraform, Azure Firewall, Bastion, Key Vault |
-| 4 | [AWS Landing Network](#4-aws-landing-network) | Multi-AZ VPC, ALB, private EC2, locked remote Terraform state | Terraform, VPC, ALB, IAM, S3, DynamoDB |
-| 5 | [Airflow Observability Pipeline](#5-airflow-observability-pipeline) | Airflow on LocalExecutor, instrumented StatsD → Prometheus → Grafana | Docker Compose, Airflow, PostgreSQL, Prometheus, Grafana |
-
-<br/>
+![Git](https://img.shields.io/badge/Git-Branching_Strategy-F05032?logo=git&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-Automated_Pipelines-2088FF?logo=azuredevops&logoColor=white)
+![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?logo=terraform&logoColor=white)
+![SemVer](https://img.shields.io/badge/Versioning-SemVer-brightgreen)
 
 ---
 
-## 1. Axion Intelligence Platform
+## Table of Contents
 
-[![Repo](https://img.shields.io/badge/REPO-axion--cloud--infrastructure-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/axion-cloud-infrastructure)
+1. [Overview](#1-overview)
+2. [Architecture Diagram](#2-architecture-diagram)
+3. [Two Workflow Patterns at a Glance](#3-two-workflow-patterns-at-a-glance)
+4. [Pattern A: Trunk-Based Strategy (Terraform Repo)](#4-pattern-a-trunk-based-strategy-terraform-repo)
+5. [Pattern B: Git Flow Strategy (todo-ui Repo)](#5-pattern-b-git-flow-strategy-todo-ui-repo)
+6. [CI/CD Pipelines](#6-cicd-pipelines)
+7. [Environments](#7-environments)
+8. [Release Versioning (SemVer)](#8-release-versioning-semver)
+9. [Hotfix Process](#9-hotfix-process)
+10. [Branch Naming & Protection Rules](#10-branch-naming--protection-rules)
+11. [Hybrid Workflow Option](#11-hybrid-workflow-option)
+12. [Choosing a Strategy](#12-choosing-a-strategy)
+13. [Assumptions & Open Points](#13-assumptions--open-points)
+14. [Suggested Repository Structure](#14-suggested-repository-structure)
+15. [Key Takeaways](#15-key-takeaways)
+16. [Author](#author)
 
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![Azure](https://img.shields.io/badge/AKS%20%2F%20ACR-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+---
 
-A production-style industrial IoT condition-monitoring platform. 27 simulated assets (pumps, motors, compressors) across five refinery sites stream temperature, vibration, and current readings every 5 seconds. Terraform provisions the Azure footprint, GitHub Actions builds and pushes images to ACR, and Kubernetes manifests roll the workloads onto AKS, with a live dashboard featuring 3D digital twins, trend charts, and real-time health scoring.
+## 1. Overview
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/aniket-devop/axion-cloud-infrastructure/main/docs/architecture.png" width="90%" alt="Axion architecture"/>
-<br/>
-<sub>Terraform → Azure footprint · GitHub Actions → ACR · Kubernetes manifests → AKS · LoadBalancer services → UI and API</sub>
-</div>
+This project documents a branching and delivery model derived from an architecture diagram that shows **two related but distinct workflows**:
 
-<details>
-<summary><b>⚙️ Key engineering decisions · 📚 honest scope · 🚀 roadmap</b></summary>
-<br/>
+| | Pattern A | Pattern B |
+|---|---|---|
+| **Name in diagram** | Trunk-based strategy | Git Flow branching strategy |
+| **Repository in diagram** | `Terraform-Repo` | `todo-ui` |
+| **Typical use** | Infrastructure as Code | Application (UI) delivery |
+| **Environments** | `dev`, `tst`, `qa` | `dev`, `qa`, `uat`, `prod` |
 
-**Key decisions**
-- Split ingestion (write-heavy, latency-sensitive) and query (aggregation + health scoring) into separate services so each scales independently
-- Terraform `for_each` over an `environments` map: one module tree renders dev/staging/prod without duplicated root configs
-- Remote state bootstrapped in a separate `state-infrastructure/` stack, solving the chicken-and-egg backend problem cleanly
-- `admin_enabled = false` on ACR, forcing identity-based auth instead of shared admin credentials
-- Health scoring computed server-side (SQL/Python), keeping the dashboard a thin client with consistent logic across consumers
+**Goals**
 
-**Honest scope**
-A portfolio build with intentional, documented gaps: database credentials are currently inline rather than in Key Vault-backed Secrets, storage uses `emptyDir` instead of a PersistentVolumeClaim, and there's no Ingress/TLS yet. These are listed openly in the repo's roadmap.
+- Keep integration frequent and changes small.
+- Enforce quality gates through pull requests and automated pipelines.
+- Promote the same build through progressively stricter environments.
+- Version releases predictably with Semantic Versioning.
+- Provide a safe, auditable path for emergency hotfixes.
 
-**Run it**
+> **Important:** These are two separate patterns. They can be evaluated independently, or combined into a hybrid (see [Section 11](#11-hybrid-workflow-option)). They are **not** one identical branching model.
+
+---
+
+## 2. Architecture Diagram
+
+Place the source diagram in the repository and reference it here:
+
+```markdown
+![Branching Strategy Architecture](docs/images/architecture-diagram.png)
+```
+
+<p align="center">
+  <img src="docs/images/architecture-diagram.png" alt="Trunk-based and Git Flow branching strategy architecture" width="900"/>
+</p>
+
+*Upper section: Trunk-based strategy. Lower section: Git Flow strategy.*
+
+---
+
+## 3. Two Workflow Patterns at a Glance
+
+| Aspect | A: Trunk-Based (Terraform-Repo) | B: Git Flow (todo-ui) |
+|---|---|---|
+| Long-lived branches | `main` | `main`, `develop` (plus release branches while active) |
+| Short-lived branches | `feature/dev-changes`, `feature/tst-changes` | `feature/account`, `feature/cart`, `feature/product`, `feature/wishlist`, `release/*`, `hotfix/*` |
+| Integration point | `main` via Pull Request | `develop` via Pull Request |
+| Environment mapping | Folders under `environment/` (`dev`, `tst`, `qa`) | Branch/pipeline stages (`dev`, `qa`, `uat`, `prod`) |
+| Release mechanism | Merge to `main`, pipeline applies per environment | Dedicated `release/*` branches, stabilized, then merged to `main` |
+| Production environment | Not shown in diagram | `prod-vm` |
+| Release ceremony | Light | Formal (QA → UAT → PROD) |
+| Best for | Fast-moving, small-change repos (IaC, config) | Versioned, scheduled releases with formal sign-off |
+
+---
+
+## 4. Pattern A: Trunk-Based Strategy (Terraform Repo)
+
+### 4.1 Description
+
+Infrastructure code lives in a single `Terraform-Repo` where **`main` is the only long-lived branch**. Engineers make small changes on short-lived feature branches and merge them back into `main` through Pull Requests.
+
+Environment configuration is organized in an `environment/` structure containing `dev`, `tst`, and `qa`. Each environment has its own pipeline, which deploys to its own VM: `dev-vm`, `tst-vm`, and `qa-vm`.
+
+```mermaid
+flowchart TD
+    subgraph Repo["Terraform-Repo (GitHub)"]
+        F1["feature/dev-changes<br/>(short-lived)"]
+        F2["feature/tst-changes<br/>(short-lived)"]
+        M["main<br/>(long-lived)"]
+        subgraph ENV["environment/"]
+            D["dev"]
+            T["tst"]
+            Q["qa"]
+        end
+    end
+
+    F1 -. "Pull Request" .-> M
+    F2 -. "Pull Request" .-> M
+    M --- ENV
+
+    D --> PD["dev pipeline"] --> VD["dev-vm"]
+    T --> PT["tst pipeline"] --> VT["tst-vm"]
+    Q --> PQ["qa pipeline"] --> VQ["qa-vm"]
+```
+
+### 4.2 Branches
+
+| Branch | Lifetime | Purpose |
+|---|---|---|
+| `main` | Long-lived | Single source of truth for infrastructure code |
+| `feature/dev-changes` | Short-lived | Changes targeting the `dev` environment configuration |
+| `feature/tst-changes` | Short-lived | Changes targeting the `tst` environment configuration |
+
+### 4.3 Workflow
+
+1. Create a short-lived branch from the latest `main`.
+2. Make a small, focused change (for example, in the `dev` environment folder).
+3. Open a **Pull Request** to `main`.
+4. Automated checks run (format, validate, plan; see below).
+5. A reviewer approves the PR.
+6. Merge to `main` and delete the feature branch.
+7. The environment-specific pipeline deploys the change to its target VM.
+
+### 4.4 How Automated Checks, PR Reviews, and Environment Deployments Support This Workflow
+
+| Control | Purpose |
+|---|---|
+| `terraform fmt -check` | Enforces consistent formatting |
+| `terraform validate` | Catches syntax and configuration errors early |
+| `terraform plan` (posted to the PR) | Gives reviewers a preview of exactly what will change |
+| Static / security scan (e.g. `tfsec`, `checkov`) | Detects insecure infrastructure before merge |
+| Required PR review (CODEOWNERS) | Peer review, plus environment-owner approval for `qa` |
+| Branch protection on `main` | No direct pushes; required status checks must pass |
+| Per-environment pipeline | Each of `dev`, `tst`, `qa` deploys independently to its own VM |
+| Environment approvals | Optional manual approval gate before `qa` apply |
+
+### 4.5 Promotion Across Environments
+
+The diagram shows three parallel environment pipelines (`dev`, `tst`, `qa`) fed from the `environment` structure in `main`. The recommended promotion order is:
+
+```
+dev  →  tst  →  qa
+```
+
+Change is applied to `dev` first, validated, then promoted to `tst` and `qa` through the same `main` branch (by updating each environment's configuration in a follow-up PR or via a gated pipeline stage).
+
+> See [Assumptions](#13-assumptions--open-points): the diagram shows `dev`, `tst`, `qa` as a grouped `environment` structure under `main`, which this README interprets as **folders/configurations**, not separate long-lived branches.
+
+---
+
+## 5. Pattern B: Git Flow Strategy (todo-ui Repo)
+
+### 5.1 Description
+
+The `todo-ui` repository (a Node.js UI project with `src/`, `public/`, and `package.json`) follows a **Git Flow-style** model. Developers work on short-lived feature branches that merge into `develop`. When `develop` is ready to ship, a release branch is cut and promoted through QA and UAT before reaching production.
+
+```mermaid
+flowchart LR
+    subgraph Features["Short-lived feature branches"]
+        FA["feature/account"]
+        FC["feature/cart"]
+        FP["feature/product"]
+        FW["feature/wishlist"]
+    end
+
+    FA & FC & FP & FW -->|"Pull Request<br/>(PR pipeline)"| DEV["develop<br/>(integration)"]
+    DEV -->|"DEV pipeline<br/>npm install + build"| DVM["dev-vm<br/>(developer testing)"]
+
+    DEV -->|"cut release"| REL["release/1.0<br/>release/1.1<br/>release/2.0"]
+    REL -->|"QA pipeline"| QVM["qa-vm<br/>(Testers)"]
+    REL -->|"UAT pipeline"| UVM["uat-vm<br/>(Business users)"]
+    REL -->|"PROD pipeline"| PVM["prod-vm<br/>(End users)"]
+    REL -->|"merge"| MAIN["main<br/>(stable, running in production)"]
+
+    HF["hotfix/123"] -. "urgent fix" .-> MAIN
+```
+
+### 5.2 Illustrative Git Flow History
+
+```mermaid
+gitGraph
+    commit id: "stable baseline"
+    branch develop
+    checkout develop
+    commit id: "integration"
+    branch "feature/account"
+    checkout "feature/account"
+    commit id: "account work"
+    checkout develop
+    merge "feature/account"
+    branch "release/1.0"
+    checkout "release/1.0"
+    commit id: "stabilization fix"
+    checkout main
+    merge "release/1.0" tag: "1.0.0"
+    checkout develop
+    merge "release/1.0"
+```
+
+*This is a conceptual illustration of the standard Git Flow lifecycle; it is not a literal copy of the diagram.*
+
+### 5.3 Branches
+
+| Branch | Lifetime | Purpose |
+|---|---|---|
+| `main` | Long-lived | Most stable code, the code running in production. Every merge corresponds to a release. |
+| `develop` | Long-lived | Integration branch for completed features. Source for DEV builds and release branches. |
+| `feature/account` | Short-lived | Account functionality |
+| `feature/cart` | Short-lived | Cart functionality |
+| `feature/product` | Short-lived | Product functionality |
+| `feature/wishlist` | Short-lived | Wishlist functionality |
+| `release/1.0`, `release/1.1`, `release/2.0` | Temporary | Release stabilization and promotion through QA, UAT, PROD |
+| `hotfix/123` | Short-lived | Example urgent production fix |
+
+### 5.4 Feature Development
+
+1. Developers branch from `develop` into `feature/<name>`.
+2. Work is committed in small increments; branches are kept short-lived to limit merge conflicts.
+3. A Pull Request into `develop` triggers the **PR pipeline**.
+4. After review and a passing pipeline, the PR is merged.
+5. Merges to `develop` trigger the **DEV pipeline**: `npm install` + build, then deploy to **`dev-vm`**.
+6. Developers perform **developer testing** on `dev-vm`.
+
+### 5.5 Release Stabilization
+
+When `develop` contains the scope intended for a release:
+
+1. Create `release/<version>` from `develop` (for example `release/1.0`).
+2. **Feature freeze:** only bug fixes, documentation, and release metadata are allowed on the release branch.
+3. The release candidate is deployed through **QA → UAT → PROD**.
+4. Fixes found during QA/UAT are committed to the release branch and re-validated.
+5. Once approved, the release is merged to `main`, tagged with its semantic version, and deployed to production.
+6. The release branch is merged back into `develop` so fixes are not lost (standard Git Flow practice; see [Assumptions](#13-assumptions--open-points)).
+
+**Why release branches?** They isolate a release candidate from ongoing feature work, so `develop` keeps moving while QA and UAT test a stable snapshot. The diagram shows multiple release branches (`release/1.0`, `release/1.1`, `release/2.0`), indicating that releases are cut in succession.
+
+### 5.6 Testing & Sign-off
+
+| Stage | Environment | Performed by | Focus |
+|---|---|---|---|
+| Developer testing | `dev-vm` | Developers | Smoke checks and integration sanity on latest `develop` |
+| QA | `qa-vm` | Testers (diagram shows Tester1, Tester2, Tester3) | Functional, regression, and integration testing against the release branch |
+| UAT | `uat-vm` | Business stakeholders | Business-acceptance validation; confirms the release meets business requirements |
+| Production | `prod-vm` | End users | Live use after approval |
+
+The diagram notes that **UAT is performed by business users** (annotation in Hindi: *"UAT ko test karne wale business ke log rahenge"*).
+
+---
+
+## 6. CI/CD Pipelines
+
+### 6.1 Pipeline Overview
+
+| Pipeline | Pattern | Typical Trigger | Responsibilities | Target |
+|---|---|---|---|---|
+| `dev` / `tst` / `qa` (infra) | A | Merge to `main` affecting that environment | Terraform init, validate, plan, apply | `dev-vm`, `tst-vm`, `qa-vm` |
+| **PR pipeline** | B | Pull Request to `develop` | Install, lint, unit tests, build verification | None (validation only) |
+| **DEV pipeline** | B | Merge/push to `develop` | `npm install` + build, deploy | `dev-vm` |
+| **QA pipeline** | B | Release branch created or updated | Build release candidate, deploy | `qa-vm` |
+| **UAT pipeline** | B | QA sign-off (gated) | Promote the QA-approved build | `uat-vm` |
+| **PROD pipeline** | B | UAT sign-off + manual approval | Promote the approved build, tag version | `prod-vm` |
+
+### 6.2 Pipeline Principles
+
+- **Build once, deploy many.** Promote the same artifact from QA → UAT → PROD instead of rebuilding.
+- **Gate each promotion.** QA sign-off before UAT, UAT sign-off before PROD.
+- **Fail fast.** Lint, tests, and build checks run in the PR pipeline before code reaches `develop`.
+- **Traceability.** Every deployment maps to a commit SHA and, for releases, a version tag.
+- **Manual approval for PROD.** Production deployments require an explicit approval step.
+
+### 6.3 Example: PR Pipeline (Azure Pipelines YAML)
+
+> The pipeline icons in the diagram resemble Azure Pipelines. The examples below use that syntax, but the same stages translate directly to GitHub Actions or other CI/CD tools.
+
+```yaml
+# pr-pipeline.yml
+trigger: none
+pr:
+  branches:
+    include:
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+  - script: npm ci
+    displayName: Install dependencies
+  - script: npm run lint --if-present
+    displayName: Lint
+  - script: npm test --if-present
+    displayName: Unit tests
+  - script: npm run build
+    displayName: Build verification
+```
+
+### 6.4 Example: DEV Pipeline
+
+```yaml
+# dev-pipeline.yml
+trigger:
+  branches:
+    include:
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: npm install
+    displayName: npm install
+  - script: npm run build
+    displayName: Build
+  - publish: build
+    artifact: todo-ui-dev
+  # Deploy step to dev-vm (SSH / deployment group / self-hosted agent)
+```
+
+### 6.5 Example: Release Promotion (QA → UAT → PROD)
+
+```yaml
+# release-pipeline.yml
+trigger:
+  branches:
+    include:
+      - release/*
+
+stages:
+  - stage: Build
+    jobs:
+      - job: BuildArtifact
+        steps:
+          - script: npm ci && npm run build
+          - publish: build
+            artifact: todo-ui
+
+  - stage: QA
+    dependsOn: Build
+    jobs:
+      - deployment: DeployQA
+        environment: qa-vm          # environment checks configured in Azure DevOps
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to qa-vm"
+
+  - stage: UAT
+    dependsOn: QA
+    jobs:
+      - deployment: DeployUAT
+        environment: uat-vm         # approval: business stakeholders
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to uat-vm"
+
+  - stage: PROD
+    dependsOn: UAT
+    jobs:
+      - deployment: DeployPROD
+        environment: prod-vm        # approval: release manager
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to prod-vm"
+```
+
+### 6.6 Example: Terraform Environment Pipeline (Pattern A)
+
+```yaml
+# terraform-dev-pipeline.yml
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - environment/dev/*
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: terraform -chdir=environment/dev init
+  - script: terraform -chdir=environment/dev fmt -check
+  - script: terraform -chdir=environment/dev validate
+  - script: terraform -chdir=environment/dev plan -out=tfplan
+  - script: terraform -chdir=environment/dev apply -auto-approve tfplan
+```
+
+---
+
+## 7. Environments
+
+| Environment | VM | Pattern | Purpose | Audience |
+|---|---|---|---|---|
+| DEV | `dev-vm` | A and B | Early integration and developer testing | Developers |
+| TST | `tst-vm` | A only | Test environment for infrastructure changes | Engineers |
+| QA | `qa-vm` | A and B | Functional and regression testing | Testers |
+| UAT | `uat-vm` | B only | Business acceptance testing | Business stakeholders |
+| PROD | `prod-vm` | B only | Live production | End users |
+
+```mermaid
+flowchart LR
+    A["feature/*"] --> B["develop"] --> C["dev-vm"]
+    B --> D["release/*"]
+    D --> E["qa-vm"] --> F["uat-vm"] --> G["prod-vm"]
+```
+
+---
+
+## 8. Release Versioning (SemVer)
+
+Releases follow [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`.
+
+| Segment | Increment when | Example |
+|---|---|---|
+| **MAJOR** | Breaking changes | `1.x.x` → `2.0.0` |
+| **MINOR** | New backward-compatible functionality | `1.0.0` → `1.1.0` |
+| **PATCH** | Backward-compatible bug fixes (including hotfixes) | `1.1.0` → `1.1.1` |
+
+**Mapping to the diagram:**
+
+| Diagram label | Meaning in this README |
+|---|---|
+| `release/1.0` | Initial release line → tag `v1.0.0` |
+| `release/1.1` | Minor release line → tag `v1.1.0` (with patch tags such as `v1.1.1` for fixes) |
+| `release/2.0` | Major release line → tag `v2.0.0` |
+
+The diagram labels branches as `release/1.0`, `release/1.1`, `release/2.0` and shows a "Semantic Version" annotation near the PROD pipeline. This README therefore treats **branch names as release lines** and **Git tags as full `MAJOR.MINOR.PATCH` versions**. If you prefer three-part branch names (for example `release/1.0.0`), the workflow is unchanged.
+
+**Tagging a release:**
+
 ```bash
-cd terraform && terraform init && terraform apply
-kubectl apply -f k8s/
+git checkout main
+git merge --no-ff release/1.0
+git tag -a v1.0.0 -m "Release 1.0.0"
+git push origin main --tags
 ```
-
-**Roadmap**
-- Move database credentials to Kubernetes Secrets backed by Azure Key Vault
-- Replace `emptyDir` with a PersistentVolumeClaim on Azure Disk
-- Replace dual LoadBalancers with a single Ingress (NGINX + cert-manager) for TLS
-- Add HorizontalPodAutoscalers and resource requests/limits on all deployments
-
-</details>
-
-<br/>
 
 ---
 
-## 2. GitOps CI/CD Pipeline
+## 9. Hotfix Process
 
-[![App repo](https://img.shields.io/badge/APP-gitops--ci--pipeline-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/gitops-ci-pipeline)
-[![GitOps repo](https://img.shields.io/badge/GITOPS-gitops--kubernetes--config-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/gitops-kubernetes-config)
+`hotfix/123` is shown in the diagram as an example hotfix branch (here, `123` is assumed to be an issue/ticket number).
 
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aqua&logoColor=white)
-![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
-![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat-square&logo=argo&logoColor=white)
+**Purpose:** Fix a critical production defect without waiting for the next planned release.
 
-A two-repository GitOps setup: one repo owns the FastAPI app and its CI pipeline, the other owns the desired Kubernetes state that ArgoCD reconciles against. **CI never touches the cluster.** The boundary is enforced by design, not just documented.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/aniket-devop/gitops-kubernetes-config/main/screenshots/architecture-diagram.png" width="90%" alt="GitOps architecture"/>
-</div>
-
-```
-Developer → gitops-ci-pipeline → GitHub Actions → pytest → Docker build
-   → Trivy CRITICAL scan → GHCR → Git commit to gitops-kubernetes-config
-   → ArgoCD → Kind Kubernetes
+```mermaid
+flowchart LR
+    M["main (production)"] -->|branch| H["hotfix/123"]
+    H -->|"fix + test"| H
+    H -->|"PR + approval"| M
+    M -->|"tag vX.Y.Z+1 + PROD pipeline"| P["prod-vm"]
+    H -->|"back-merge"| D["develop"]
 ```
 
-**Highlights**
-- 🔒 Trivy `CRITICAL` gate hard-fails the job before an image reaches GHCR
-- 🔒 Non-root container (`appuser`) on a minimal `python:3.12-alpine` base
-- 🔒 Two separately scoped credentials: `GITHUB_TOKEN` for GHCR, a distinct `GITOPS_REPO_TOKEN` for the cross-repo commit
-- 🔄 **Rollback is pure Git**: a `git revert` on the image-tag commit made ArgoCD's `selfHeal` restore the previous version. No `kubectl rollout undo`, no ArgoCD CLI
-
-<details>
-<summary><b>🔁 CI/CD flow · 📚 honest scope · 🚀 roadmap</b></summary>
-<br/>
-
-**CI/CD**
-On every push to `main`: checkout → `pytest` → tag image with short commit SHA → Docker build → Trivy scan (`severity: CRITICAL`) → push to GHCR → commit the new tag to `gitops-kubernetes-config`. ArgoCD (`automated`, `prune: true`, `selfHeal: true`) picks up the commit and reconciles the Kind cluster. GitHub Actions never runs `kubectl` or holds cluster credentials.
-
-**Useful commands**
-```bash
-kubectl scale deployment gitops-demo --replicas=5 -n gitops-demo-dev
-kubectl get pods -n gitops-demo-dev -w
-argocd app get gitops-demo-dev
-```
-
-**Honest scope**
-Runs on a local Kind cluster, so no production traffic, uptime, or scale claims. Only `dev` is fully automated; `staging` exists but needs manual sync with no promotion path yet.
-
-**Roadmap**
-- `dev` → `staging` promotion workflow
-- Move to a managed Kubernetes service (e.g. AKS) and registry (e.g. ACR)
-- Ingress + TLS, Horizontal Pod Autoscaler, NetworkPolicy/RBAC
-
-</details>
-
-<br/>
-
----
-
-## 3. Azure Network Foundation
-
-[![Repo](https://img.shields.io/badge/REPO-azure--network--foundation--terraform-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/azure-network-foundation-terraform)
-
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![Azure Firewall](https://img.shields.io/badge/Azure%20Firewall-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Bastion](https://img.shields.io/badge/Bastion-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Key Vault](https://img.shields.io/badge/Key%20Vault-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-A Terraform-built Azure networking and security foundation: a hub VNet (Firewall + Bastion), a spoke VNet with a deny-by-default NSG and an AKS-designated subnet, egress forced through the Firewall via a route table, an RBAC-authorized Key Vault, and role assignments scoped to the resource group rather than the subscription. Deployable to `dev` and `prod` from one DRY Terraform configuration.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/aniket-devop/azure-network-foundation-terraform/main/diagrams/architecture.png" width="90%" alt="Azure network foundation architecture"/>
-</div>
-
-**Highlights**
-- 🔐 RBAC scoped to the **resource group**, not the subscription, to limit blast radius
-- 🔐 Explicit `DenyAllInbound` NSG rule instead of relying on Azure's implicit defaults
-- 🔐 **Azure Bastion** instead of a jump box, so no VM carries a public IP
-- 🔐 Route table forces all AKS-subnet egress through the Firewall's private IP, so its allow-rules are actually enforced
-
-<details>
-<summary><b>⚙️ Decisions · 🔁 CI · 📚 honest scope · 🚀 roadmap</b></summary>
-<br/>
-
-**Decision:** Key Vault is secured via **RBAC + network ACL** (not a Private Endpoint), a deliberate, documented trade-off for this project's scope.
-
-**CI:** `terraform-ci.yml` runs `terraform fmt -check`, `terraform init -backend=false`, and `terraform validate` on every PR and push to `main`. No `plan`/`apply` automation or security scanning yet.
+**Steps (standard Git Flow practice):**
 
 ```bash
-cd environments/dev
-terraform init
-terraform validate
+git checkout main && git pull
+git checkout -b hotfix/123
+# ...implement and test the fix...
+git push -u origin hotfix/123
+# Open PR -> main, get approval, run required checks
+# After merge: bump PATCH version and tag
+git tag -a v1.1.1 -m "Hotfix 123"
+git push origin --tags
+# Back-merge into develop (or the active release branch) so the fix is not lost
 ```
-
-**Honest scope:** Personal, sandbox-scale project. Not a Cloud Adoption Framework landing zone (no management groups, no Azure Policy, no multi-subscription governance), and no compute is deployed yet. `dev` and `prod` are `.tfvars`-differentiated instances of the same modules.
-
-**Roadmap**
-- Post `terraform plan` output as a PR comment before adding `apply` automation
-- Add `terraform test` coverage
-- Deploy an AKS cluster into the prepared `snet-aks` subnet
-
-</details>
-
-<br/>
 
 ---
 
-## 4. AWS Landing Network
+## 10. Branch Naming & Protection Rules
 
-[![Repo](https://img.shields.io/badge/REPO-aws--terraform--landing--zone--project-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/aws-terraform-landing-zone-project)
+### 10.1 Naming Conventions
 
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![AWS](https://img.shields.io/badge/VPC%20%2F%20EC2%20%2F%20ALB-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![S3](https://img.shields.io/badge/S3%20%2B%20DynamoDB-569A31?style=flat-square&logo=amazons3&logoColor=white)
+| Type | Pattern | Example |
+|---|---|---|
+| Feature | `feature/<short-name>` | `feature/cart` |
+| Release | `release/<major>.<minor>` | `release/1.1` |
+| Hotfix | `hotfix/<ticket-id>` | `hotfix/123` |
+| Infra change (Pattern A) | `feature/<env>-changes` | `feature/dev-changes` |
 
-A self-driven project applying the same private-compute networking pattern as the Azure project, this time in AWS: multi-AZ VPC, ALB-fronted EC2 in private subnets, and locked remote Terraform state. AWS is a secondary, personal-project skill alongside Azure as the primary professional cloud.
+### 10.2 Recommended Branch Protection
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/aniket-devop/aws-terraform-landing-zone-project/main/diagrams/architecture.png" width="90%" alt="AWS architecture"/>
-</div>
+| Branch | Rules |
+|---|---|
+| `main` | No direct pushes; PR required; ≥1 approval (≥2 recommended); required status checks; linear history or `--no-ff` merges; restrict who can merge |
+| `develop` | No direct pushes; PR required; PR pipeline must pass |
+| `release/*` | PR required for fixes; restricted to release owners |
+| `feature/*`, `hotfix/*` | Delete after merge |
 
-**How it works:** one VPC (`10.0.0.0/16`) across two AZs, each with a public subnet (ALB + NAT Gateway) and a private subnet (EC2 + Security Group + IAM role). The Internet Gateway only reaches public subnets, EC2 security groups accept traffic only from the ALB, outbound-only access goes through the NAT Gateway, and Terraform state lives in S3 with DynamoDB locking.
+### 10.3 Pull Request Checklist
 
-<details>
-<summary><b>🔁 CI · 🚀 roadmap</b></summary>
-<br/>
-
-**CI:** every PR runs `terraform fmt -check` → `terraform validate` → `terraform plan` via GitHub Actions before anything is applied.
-
-```bash
-terraform init
-terraform plan
-terraform apply
-```
-
-**Roadmap**
-- HTTPS listener on the ALB with an ACM certificate
-- Auto Scaling Group instead of a static EC2 instance
-- CloudWatch alarms and a basic monitoring dashboard
-
-</details>
-
-<br/>
+- [ ] Small and focused change
+- [ ] PR pipeline / required checks are green
+- [ ] At least one reviewer approved
+- [ ] Documentation and tests updated if relevant
+- [ ] Linked to a work item or ticket
 
 ---
 
-## 5. Airflow Observability Pipeline
+## 11. Hybrid Workflow Option
 
-[![Repo](https://img.shields.io/badge/REPO-airflow--docker--grafana--monitoring-181717?style=for-the-badge&logo=github)](https://github.com/aniket-devop/airflow-docker-grafana-monitoring)
+The two patterns can be adapted into a hybrid depending on the team's needs:
 
-![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-
-A containerized Apache Airflow deployment, delivered as a freelance client project and re-architected from Airflow's official CeleryExecutor/Redis template into a single-node **LocalExecutor + PostgreSQL** setup. Instrumented with a StatsD → Prometheus → Grafana metrics pipeline and orchestrated with a single `docker compose up`.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/aniket-devop/airflow-docker-grafana-monitoring/main/assets/architecture-diagram.png" width="90%" alt="Airflow observability architecture"/>
-</div>
-
-**Monitoring flow:** Airflow emits StatsD metrics → StatsD Exporter republishes in Prometheus format → Prometheus scrapes every 15s → Grafana added as a data source.
-
-<details>
-<summary><b>⚙️ Decisions · 📚 honest scope · 🚀 roadmap</b></summary>
-<br/>
-
-**Components:** Airflow API Server, Scheduler (runs tasks directly via LocalExecutor), DAG Processor, Triggerer, PostgreSQL 16, StatsD Exporter, Prometheus, Grafana, all on one Docker Compose network.
-
-**Decisions**
-- Swapped CeleryExecutor + Redis for **LocalExecutor**, removing a message broker and worker fleet with no benefit at single-node scale, while keeping health checks, dependency ordering, and persistent metadata storage
-- Bridged metrics via **StatsD → Prometheus** since Airflow doesn't expose a native `/metrics` endpoint in this configuration
-
-**Honest scope:** a working single-node deployment with a verified metrics pipeline, not a distributed production platform. No Grafana dashboards or alerting are pre-provisioned, and Prometheus/Grafana have no persistent storage.
-
-```bash
-docker compose up -d
-docker compose ps
-curl http://localhost:8080  # Airflow UI
-```
-
-**Roadmap**
-- Ship a starter Grafana dashboard + Prometheus datasource provisioning
-- Add Alertmanager with basic failure-rate alerts
-- Pin third-party image versions currently tracking `:latest`
-
-</details>
-
-<br/>
+| Hybrid idea | Description |
+|---|---|
+| **Different repos, different strategies** | Use trunk-based for infrastructure (`Terraform-Repo`) and Git Flow for the application (`todo-ui`), which is exactly what the diagram shows. |
+| **Trunk-based application with release tags** | Drop `develop`; merge features straight to `main` behind feature flags, cut `release/*` only when a hotfix line is needed. |
+| **Git Flow + shorter cycles** | Keep `develop` and release branches, but cut releases frequently and keep features very short-lived to approximate trunk-based integration speed. |
+| **Environment promotion for IaC** | Apply the QA → UAT → PROD gate model to Terraform by adding `uat` and `prod` environments to the `environment/` structure. |
 
 ---
 
-## 🤖 This Profile Maintains Itself
+## 12. Choosing a Strategy
 
-The stats card above isn't a third-party widget. It's generated by a small **Node.js script** (`scripts/generate-stats.mjs`) that calls the GitHub API, and a **GitHub Actions workflow** (`.github/workflows/update-stats.yml`) re-runs it daily and commits the result. Same philosophy as everything else here: automated, reproducible, in code.
+| Choose **Trunk-Based** when… | Choose **Git Flow** when… |
+|---|---|
+| You deploy frequently and want minimal branching overhead | You ship scheduled, versioned releases |
+| Strong automated testing and feature flags exist | Formal QA and UAT sign-off are mandatory |
+| Changes are small and independent (typical for IaC) | Multiple release versions must be supported |
+| Team is small to medium and communicates well | Compliance requires explicit release gates |
 
-<br/>
+---
 
-## 📬 Let's Talk
+## 13. Assumptions & Open Points
 
-I'm **open to DevOps / Cloud Engineer roles**, full-time, Bengaluru or remote.
+This README follows the diagram as the source of truth. Where the diagram is ambiguous or silent, the following assumptions were made. Please verify them against your actual setup.
 
-If any of this is relevant to a role you're hiring for, or you just want to compare notes on Terraform module design, AKS networking, or GitOps patterns, reach out. I read every message.
+| # | Area | What the diagram shows | Assumption in this README |
+|---|---|---|---|
+| 1 | Environment structure (Pattern A) | `dev`, `tst`, `qa` grouped under an `environment` box inside `main` | Treated as **folders/configurations in `main`**, not long-lived branches |
+| 2 | PR direction (Pattern A) | Dashed arrows between feature branches and `main`, with a "PR" label | Feature branches are created from `main` and merged back via PR |
+| 3 | Feature-to-environment mapping (A) | `feature/dev-changes` and `feature/tst-changes` | Each branch changes the config of its named environment |
+| 4 | Promotion order (A) | Three parallel pipelines | Recommended order `dev → tst → qa`; not an explicit arrow in the diagram |
+| 5 | Release branch names (B) | `release/1.0`, `release/1.1`, `release/2.0` | Used as shown; tags use full SemVer (e.g. `v1.0.0`). Names like `release/1.0.0` or `1.1.1` are equally valid |
+| 6 | Release-to-pipeline mapping (B) | Connectors from release branches to QA, UAT, and PROD pipelines; a dashed line from `release/1.1` towards `main`/PROD | The **same release candidate** is promoted QA → UAT → PROD; the exact branch-to-pipeline wiring in the diagram is not fully legible |
+| 7 | Merge into `main` (B) | An arrow from the release area to `main` (labeled "most stable code that is running in production") | Release branches are merged into `main` upon approval |
+| 8 | Back-merge to `develop` (B) | Not shown | Added as standard Git Flow practice |
+| 9 | Hotfix flow (B) | `hotfix/123` appears with no connectors | Branched from `main`, merged to `main` and back-merged to `develop` (standard Git Flow) |
+| 10 | "Long Lived" labels (B) | An orange "Long Lived branch" label near the release/hotfix area | Interpreted as applying to `main` (and `develop`); release/hotfix branches are treated as **temporary** |
+| 11 | PR pipeline (B) | Dashed connector from `feature/account` to the PR pipeline and then `develop` | Applies to **all** feature branches |
+| 12 | CI/CD tool | Blue pipeline icons resembling Azure Pipelines | YAML samples use Azure Pipelines syntax; GitHub Actions is an equivalent alternative |
+| 13 | Production for Pattern A | No `prod` environment shown | Out of scope; can be added later |
+| 14 | `hotfix/123` | Only a label | `123` assumed to be an issue/ticket ID |
 
-<div align="center">
+---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Message%20me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/aniket484)
-[![Email](https://img.shields.io/badge/Email-Send%20a%20note-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aniketkmr484@gmail.com)
+## 14. Suggested Repository Structure
 
-<br/>
+```text
+.
+├── README.md
+├── docs/
+│   └── images/
+│       └── architecture-diagram.png
+├── pipelines/
+│   ├── pr-pipeline.yml
+│   ├── dev-pipeline.yml
+│   ├── release-pipeline.yml          # QA → UAT → PROD
+│   └── terraform-env-pipeline.yml
+├── terraform/                        # Pattern A example
+│   └── environment/
+│       ├── dev/
+│       ├── tst/
+│       └── qa/
+└── .github/
+    ├── CODEOWNERS
+    └── pull_request_template.md
+```
 
-**If something here helped or impressed you, a ⭐ on the repos means a lot.**
+---
 
-<sub>Thanks for visiting 💙</sub>
+## 15. Key Takeaways
 
-</div>
+- **Two patterns, not one:** trunk-based for fast, small infrastructure changes; Git Flow for versioned, gated application releases.
+- **Short-lived branches** keep integration frequent and conflicts small in both patterns.
+- **Pipelines enforce quality:** PR checks before merge, automated builds on integration, gated promotion for releases.
+- **Clear human sign-offs:** Testers validate in QA, business stakeholders validate in UAT, and only then does a release reach production.
+- **Predictable releases:** Semantic Versioning and tagged releases make every production state traceable.
+- **Safe emergencies:** Hotfix branches provide a controlled fast path to production without disrupting ongoing development.
+
+---
+
+## Author
+
+**Aniket Kumar**
+
+This repository documents Git branching strategies and CI/CD promotion workflows (trunk-based development and Git Flow) with environment-based deployments.
+
+### Connect
+
+- GitHub: [github.com/aniket-devop/aniket-devop](https://github.com/aniket-devop/aniket-devop)
+- LinkedIn: [linkedin.com/in/aniket484](https://www.linkedin.com/in/aniket484/)
+
+Suggestions and corrections are welcome through issues or pull requests.
+
+## License
+
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Aniket Kumar.
