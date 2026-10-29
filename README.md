@@ -1,4 +1,4 @@
-# Git Branching Strategy & CI/CD Pipeline with Environment-Based Deployments
+﻿# Git Branching Strategy & CI/CD Pipeline with Environment-Based Deployments
 
 > A reference implementation and documentation of two complementary Git workflows, **Trunk-Based Development** (for infrastructure code) and **Git Flow** (for application code), with automated CI/CD pipelines and promotion across **DEV → QA → UAT → PROD** environments.
 
@@ -25,7 +25,7 @@
 12. [Choosing a Strategy](#12-choosing-a-strategy)
 13. [Assumptions & Open Points](#13-assumptions--open-points)
 14. [Suggested Repository Structure](#14-suggested-repository-structure)
-15. [Key Takeaways](#15-key-takeaways)
+15. [Status and Roadmap](#status-and-roadmap)
 16. [Author](#author)
 
 ---
@@ -590,17 +590,24 @@ This README follows the diagram as the source of truth. Where the diagram is amb
 
 ---
 
-## 15. Key Takeaways
 
-- **Two patterns, not one:** trunk-based for fast, small infrastructure changes; Git Flow for versioned, gated application releases.
-- **Short-lived branches** keep integration frequent and conflicts small in both patterns.
-- **Pipelines enforce quality:** PR checks before merge, automated builds on integration, gated promotion for releases.
-- **Clear human sign-offs:** Testers validate in QA, business stakeholders validate in UAT, and only then does a release reach production.
-- **Predictable releases:** Semantic Versioning and tagged releases make every production state traceable.
-- **Safe emergencies:** Hotfix branches provide a controlled fast path to production without disrupting ongoing development.
+## Status and Roadmap
 
----
+This repository documents the two workflows and provides starter templates. Current state:
 
+| Area | Status |
+|---|---|
+| Branching strategy documentation | Complete |
+| Pipeline YAML (`pipelines/`) | Templates. Deployment steps to the VMs are placeholders |
+| Terraform (`terraform/environment/`) | Skeleton per environment (resource group only), not applied |
+| Live pipeline runs | Not configured yet |
+
+Roadmap:
+
+- [ ] Add network and VM resources to the Terraform environments
+- [ ] Run the pipelines against a real Azure DevOps project or GitHub Actions
+- [x] Demonstrate the Git Flow lifecycle in this repo (`develop`, `feature/*`, `release/1.0`, tag `v1.0.0`)
+- [ ] Enable branch protection on `main`
 ## Author
 
 **Aniket Kumar**
@@ -609,7 +616,7 @@ This repository documents Git branching strategies and CI/CD promotion workflows
 
 ### Connect
 
-- GitHub: [github.com/aniket-devop/aniket-devop](https://github.com/aniket-devop/aniket-devop)
+- GitHub: [github.com/aniket-devop](https://github.com/aniket-devop)
 - LinkedIn: [linkedin.com/in/aniket484](https://www.linkedin.com/in/aniket484/)
 
 Suggestions and corrections are welcome through issues or pull requests.
@@ -617,3 +624,4 @@ Suggestions and corrections are welcome through issues or pull requests.
 ## License
 
 Released under the [MIT License](LICENSE). Copyright (c) 2026 Aniket Kumar.
+
