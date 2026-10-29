@@ -1,0 +1,26 @@
+﻿# DEV build for todo-ui
+# Runs on every merge to develop and publishes the build artifact.
+trigger:
+  branches:
+    include:
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+
+  - script: npm install
+    displayName: npm install
+
+  - script: npm run build
+    displayName: Build
+
+  - publish: build
+    artifact: todo-ui-dev
+
+  # TODO: add the deployment step to dev-vm
+  # (SSH, deployment group or self-hosted agent, depending on your setup).

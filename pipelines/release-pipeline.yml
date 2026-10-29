@@ -1,0 +1,56 @@
+﻿# Release promotion for todo-ui: build once, then QA -> UAT -> PROD.
+# Approvals are configured on each Environment in Azure DevOps
+# (qa-vm, uat-vm, prod-vm), not in this file.
+trigger:
+  branches:
+    include:
+      - release/*
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Build
+    jobs:
+      - job: BuildArtifact
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+          - script: npm ci && npm run build
+            displayName: Build release candidate
+          - publish: build
+            artifact: todo-ui
+
+  - stage: QA
+    dependsOn: Build
+    jobs:
+      - deployment: DeployQA
+        environment: qa-vm
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to qa-vm"   # TODO: replace with real deployment
+
+  - stage: UAT
+    dependsOn: QA
+    jobs:
+      - deployment: DeployUAT
+        environment: uat-vm
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to uat-vm"  # TODO: replace with real deployment
+
+  - stage: PROD
+    dependsOn: UAT
+    jobs:
+      - deployment: DeployPROD
+        environment: prod-vm
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo "Deploy to prod-vm" # TODO: replace with real deployment
