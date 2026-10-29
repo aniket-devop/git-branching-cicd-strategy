@@ -616,12 +616,13 @@ This repository documents Git branching strategies and CI/CD promotion workflows
 
 ### Connect
 
-- GitHub: [github.com/aniket-devop](https://github.com/aniket-devop)
-- LinkedIn: [linkedin.com/in/aniket484](https://www.linkedin.com/in/aniket484/)
+[![GitHub](https://img.shields.io/badge/GitHub-aniket--devop-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aniket-devop)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aniket484-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aniket484/)
 
 Suggestions and corrections are welcome through issues or pull requests.
 
 ## License
 
 Released under the [MIT License](LICENSE). Copyright (c) 2026 Aniket Kumar.
+
 
