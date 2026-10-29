@@ -1,0 +1,28 @@
+﻿# Terraform pipeline for the dev environment (trunk-based pattern).
+# Copy and adjust the path filter for tst and qa.
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - terraform/environment/dev/*
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: terraform -chdir=terraform/environment/dev init
+    displayName: Terraform init
+
+  - script: terraform -chdir=terraform/environment/dev fmt -check
+    displayName: Terraform fmt
+
+  - script: terraform -chdir=terraform/environment/dev validate
+    displayName: Terraform validate
+
+  - script: terraform -chdir=terraform/environment/dev plan -out=tfplan
+    displayName: Terraform plan
+
+  - script: terraform -chdir=terraform/environment/dev apply -auto-approve tfplan
+    displayName: Terraform apply

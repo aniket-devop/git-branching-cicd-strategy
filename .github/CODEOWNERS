@@ -1,0 +1,7 @@
+﻿# Default owner for everything in the repository
+*            @aniket-devop
+
+# Specific areas
+/pipelines/  @aniket-devop
+/terraform/  @aniket-devop
+/docs/       @aniket-devop
